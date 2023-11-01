@@ -2,7 +2,11 @@
 export default {
   content: ["./*.{html,js}", "./login/**/*.{html,js}", "./contact/**/*.{html,js}", "./programs/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Nunito Sans', "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }

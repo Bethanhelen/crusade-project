@@ -1,4 +1,5 @@
 import './style.css'
+
 //Javascript for hamburger menu
 const btn = document.querySelector(".mobile-menu-button");
 const menu = document.querySelector(".mobile-menu");
