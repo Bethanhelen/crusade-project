@@ -24,11 +24,12 @@
           // generate a five digit number for the contact_number variable
           this.contact_number.value = Math.random() * 100000 | 11001;
           // these IDs from the previous steps
+
           emailjs.sendForm('contact_service', 'contact_form', this)
                   .then(function() {
-                    console.log('EMAIL SENT!');
+                    alert('EMAIL SENT SUCCESSFULLY!');
                   }, function(error) {
-                    console.log('FAILED...', error);
+                    alert('EMAIL FAILED TO SEND!');
                   });
         });
       }
@@ -159,12 +160,16 @@
                           class="px-4 py-2 focus:outline-none rounded bg-white/20 backdrop-blur-8 text-white col-span-2 border border-slate-500"
                           name="user_name"
                           placeholder="Name"
+                          id="name"
+                          required
                    />
 
                    <input type="email"
                           class="px-4 py-2 focus:outline-none rounded bg-white/20 backdrop-blur-8 text-white col-span-2 border border-slate-500"
                           name="user_email"
                           placeholder="Email"
+                          id="email"
+                          required
                    />
 
                    <textarea cols="10"
@@ -172,6 +177,8 @@
                              name="message"
                              class="px-4 py-2 focus:outline-none rounded bg-white/20 backdrop-blur-8 text-white col-span-2 border border-slate-500"
                              placeholder="Message"
+                             id="message"
+                             required
                    ></textarea>
                  </div>
 
@@ -211,46 +218,5 @@
               </div>
               <script type="module" src="/contact/contact.js"></script>
 
-<!--             <script>-->
-<!--               //javascript for form error messages-->
-<!--               function submit(){-->
-<!--                 if(validateForm()){-->
-<!--                   alert('valid');-->
-<!--                 }-->
-<!--               }-->
-<!--               function validateForm() {-->
-<!--                 let name = document.getElementById('name');-->
-<!--                 let email = document.getElementById('email');-->
-<!--                 let message = document.getElementById('message');-->
-
-<!--                 if (!name.value || !email.value || !message.value) {-->
-<!--                   if (!name.value) {-->
-<!--                     name.classList.remove('border-slate-500');-->
-<!--                     name.classList.add('border-red-700');-->
-<!--                   }-->
-<!--                   if (!email.value) {-->
-<!--                     email.classList.remove('border-slate-500');-->
-<!--                     email.classList.add('border-red-700');-->
-<!--                   }-->
-<!--                   if (!message.value) {-->
-<!--                     message.classList.remove('border-slate-500');-->
-<!--                     message.classList.add('border-red-700');-->
-<!--                   }-->
-<!--                   return false;-->
-<!--                 }-->
-<!--                 if (!name.value) {-->
-<!--                   name.classList.remove('border-red-700');-->
-<!--                   name.classList.add('border-slate-500');-->
-<!--                 }-->
-<!--                 if (!email.value) {-->
-<!--                   email.classList.remove('border-red-700');-->
-<!--                   email.classList.add('border-slate-500');-->
-<!--                 }-->
-<!--                 if (!message.value) {-->
-<!--                   message.classList.remove('border-red-700');-->
-<!--                   message.classList.add('border-slate-500');-->
-<!--                 }-->
-<!--               }-->
-<!--             </script>-->
             </body>
           </html>
