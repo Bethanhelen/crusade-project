@@ -15,6 +15,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "vite-plugin-inspect": "^0.7.41"
   }
 }
